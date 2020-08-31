@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+body {
+  margin: 0;
+  margin-top: 10vh
+}
+
+#container {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#topContent {
+  height: 10vh;
+  width: 100vw;
+  background-color: white;
+  border-bottom: 0.16vw solid rgb(15,15,15);
+  box-shadow: 0 0.26vw 2.6vw deepskyblue;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0; z-index: 2
+}
+
+#header {
+  width: 100%;
+  text-align: center;
+  font-size: 2.2vw;
+  margin-bottom: 1.2vh;
+}
+
+#mainContent {
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quadrant {
+  width: 49.8vw;
+  height: 45vh;
+  border: 0.2vw solid black;
+  border-top: 0.1vw solid black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.noLeft {
+  border-left: none; 
+}
+
+.noRight {
+  border-right: none;
+}
+
+.quadImg {
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.quadBox {
+  background-color: rgba(250,250,250,0.4);
+  border-radius: 3vw;
+  padding: 0vw 1.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+}
+
+.quadrantTxt {
+  font-size: 3vw;
+}
+</style>
+</head>
+<body>
+<div id="container">
+  <div id="topContent">
+    <div id="header">
+      <div class="title">the yam of damnation</div>
+    </div>
+    <div id="iconHolder"></div>
+  </div>
+  <div id="mainContent">
+    <div id="videos" class="quadrant noLeft">
+      <img id="vidImg" class="quadImg" src="https://mrbossosity.github.io/yam-of-damnation/img/berniethumb.jpg">
+      <div id="vidTxt" class="quadBox">
+        <a class="quadrantTxt">videos</a>
+      </div>
+    </div>
+    <div id="music" class="quadrant noRight">
+      <img id="musicImg" class="quadImg" src="https://mrbossosity.github.io/yam-of-damnation/img/i'm sailing thumb.jpg">
+      <div id="musicTxt" class="quadBox">
+        <a class="quadrantTxt">music</a>
+      </div>
+    </div>
+    <div id="memes" class="quadrant noLeft">
+      <img id="memesImg" class="quadImg" src="https://mrbossosity.github.io/yam-of-damnation/img/xi jing pingu.JPG">
+      <div id="memesTxt" class="quadBox">
+        <a class="quadrantTxt">memes</a>
+      </div>
+    </div>
+    <div id="text" class="quadrant noRight">
+      <img id="textImg" class="quadImg" src="https://mrbossosity.github.io/yam-of-damnation/img/text screenshot.png">
+      <div id="textTxt" class="quadBox">
+        <a class="quadrantTxt">text</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$("#vidTxt").hover(function(){
+  $(this).css("opacity", "100%");
+  $("#vidImg").animate({"opacity": "40%"}, 150);
+  }, function(){
+  $(this).css("opacity", "0%");
+  $("#vidImg").animate({"opacity": "100%"}, 200);
+})
+
+$("#musicTxt").hover(function(){
+  $(this).css("opacity", "100%");
+  $("#musicImg").animate({"opacity": "40%"}, 150);
+  }, function(){
+  $(this).css("opacity", "0%");
+  $("#musicImg").animate({"opacity": "100%"}, 200);
+})
+
+$("#memesTxt").hover(function(){
+  $(this).css("opacity", "100%");
+  $("#memesImg").animate({"opacity": "40%"}, 150);
+  }, function(){
+  $(this).css("opacity", "0%");
+  $("#memesImg").animate({"opacity": "100%"}, 200);
+})
+
+$("#textTxt").hover(function(){
+  $(this).css("opacity", "100%");
+  $("#textImg").animate({"opacity": "40%"}, 150);
+  }, function(){
+  $(this).css("opacity", "0%");
+  $("#textImg").animate({"opacity": "100%"}, 200);
+})
+</script>
+</body>
+</html>
